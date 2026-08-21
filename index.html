@@ -12,20 +12,21 @@
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
 <style>
   :root{
-    --black:#0a0a0a;
+    --ink:#14285c;
     --white:#ffffff;
     --gray-1:#f5f5f4;
     --gray-2:#8a8a86;
     --gray-3:#1c1c1c;
     --line:#e5e3df;
     --maxw:1120px;
+    --navy-grad:linear-gradient(160deg, #0b1a3f 0%, #1c3a82 55%, #0b1a3f 100%);
   }
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{
     font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Malgun Gothic',sans-serif;
     background:var(--white);
-    color:var(--black);
+    color:var(--ink);
     -webkit-font-smoothing:antialiased;
     overflow-x:hidden;
   }
@@ -47,7 +48,7 @@
     backdrop-filter:blur(10px);
     box-shadow:0 1px 0 var(--line);
   }
-  .topbar.scrolled .logo,.topbar.scrolled .back-link{color:var(--black);}
+  .topbar.scrolled .logo,.topbar.scrolled .back-link{color:var(--ink);}
   .logo{font-weight:800;font-size:20px;letter-spacing:-0.02em;color:var(--white);display:flex;align-items:baseline;gap:2px;}
   .logo sup{font-size:10px;}
   .back-link{
@@ -57,12 +58,12 @@
     transition:all .2s ease;
   }
   .topbar.scrolled .back-link{border-color:var(--line);}
-  .back-link:hover{background:var(--gray-1);border-color:var(--gray-1);color:var(--black);}
+  .back-link:hover{background:var(--gray-1);border-color:var(--gray-1);color:var(--ink);}
 
   /* ---------- Hero ---------- */
   .hero{
     min-height:100vh;
-    background:var(--black);
+    background:var(--navy-grad);
     color:var(--white);
     display:flex;flex-direction:column;justify-content:center;
     padding:120px 24px 80px;
@@ -103,7 +104,7 @@
     padding:16px 28px;border-radius:100px;font-weight:700;font-size:15px;
     transition:all .2s ease;cursor:pointer;border:none;
   }
-  .btn-primary{background:var(--white);color:var(--black);}
+  .btn-primary{background:var(--white);color:var(--ink);}
   .btn-primary:hover{background:#d8d8d5;transform:translateY(-2px);}
   .btn-ghost{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,0.35);}
   .btn-ghost:hover{border-color:var(--white);}
@@ -118,7 +119,7 @@
 
   /* ---------- Section generic ---------- */
   .section{padding:120px 24px;}
-  .section-dark{background:var(--black);color:var(--white);}
+  .section-dark{background:var(--navy-grad);color:var(--white);}
   .tag{
     font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-2);
     margin-bottom:18px;display:block;
@@ -138,7 +139,7 @@
   .stat-num{font-size:clamp(30px,5vw,52px);font-weight:800;letter-spacing:-0.02em;display:flex;align-items:baseline;gap:12px;}
   .stat-num .arrow{color:var(--gray-2);font-size:0.5em;}
   .stat-num .from{color:var(--gray-2);}
-  .stat-num .to{color:var(--black);}
+  .stat-num .to{color:var(--ink);}
   @media (max-width:640px){.stat-grid{grid-template-columns:1fr;}}
 
   /* ---------- Recruiting Part intro ---------- */
@@ -158,7 +159,7 @@
 
   /* ---------- Leader quote ---------- */
   .leader{background:var(--gray-1);text-align:center;}
-  .leader-mark{font-size:80px;color:var(--black);opacity:0.18;font-weight:800;line-height:1;margin-bottom:8px;font-family:Georgia,serif;}
+  .leader-mark{font-size:80px;color:var(--ink);opacity:0.18;font-weight:800;line-height:1;margin-bottom:8px;font-family:Georgia,serif;}
   .leader-text{
     font-size:clamp(20px,3.2vw,34px);font-weight:700;line-height:1.5;letter-spacing:-0.01em;
     max-width:820px;margin:0 auto 28px;
@@ -178,8 +179,8 @@
   }
   .job-card:hover{box-shadow:0 24px 48px rgba(0,0,0,0.08);transform:translateY(-4px);border-color:transparent;}
   .job-meta{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;}
-  .chip{font-size:12px;font-weight:700;padding:6px 12px;border-radius:100px;background:var(--gray-1);color:var(--black);}
-  .chip-accent{background:var(--black);color:var(--white);}
+  .chip{font-size:12px;font-weight:700;padding:6px 12px;border-radius:100px;background:var(--gray-1);color:var(--ink);}
+  .chip-accent{background:var(--ink);color:var(--white);}
   .job-card h3{font-size:24px;font-weight:800;letter-spacing:-0.01em;margin-bottom:10px;}
   .job-card .job-sub{font-size:14px;color:var(--gray-2);font-weight:600;margin-bottom:28px;}
   .job-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:32px;flex:1;}
@@ -189,23 +190,35 @@
   .job-list li::before{content:'';position:absolute;left:0;top:8px;width:6px;height:6px;background:var(--accent);border-radius:50%;}
   .job-apply{
     display:inline-flex;align-items:center;justify-content:space-between;gap:10px;
-    padding:16px 22px;border-radius:14px;background:var(--black);color:var(--white);
+    padding:16px 22px;border-radius:14px;background:var(--ink);color:var(--white);
     font-weight:700;font-size:15px;transition:background .2s ease;
   }
-  .job-apply:hover{background:var(--white);color:var(--black);}
+  .job-apply:hover{background:var(--white);color:var(--ink);}
 
-  /* ---------- Benefits ---------- */
-  .benefit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
-  .benefit-item{background:var(--white);padding:32px 24px;display:flex;flex-direction:column;gap:10px;}
-  .benefit-item .ic{font-size:26px;}
-  .benefit-item .tt{font-size:14.5px;font-weight:700;}
-  @media (max-width:860px){.benefit-grid{grid-template-columns:repeat(2,1fr);}}
+  /* ---------- About / Mission·Vision·Core Values ---------- */
+  .mv-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:80px;}
+  .mv-card{background:var(--gray-1);border-radius:20px;padding:36px 32px;}
+  .mv-ic{font-size:28px;margin-bottom:16px;}
+  .mv-label{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-2);margin-bottom:14px;}
+  .mv-headline{font-size:20px;font-weight:800;line-height:1.5;margin-bottom:14px;color:var(--ink);}
+  .mv-body{font-size:14.5px;line-height:1.75;color:#444;}
+  @media (max-width:760px){.mv-grid{grid-template-columns:1fr;}}
+
+  .cv-head{margin-bottom:32px;}
+  .cv-list{display:flex;flex-direction:column;}
+  .cv-item{display:flex;gap:24px;padding:28px 0;border-bottom:1px solid var(--line);}
+  .cv-item:last-child{border-bottom:none;}
+  .cv-num{font-size:14px;font-weight:800;color:var(--ink);min-width:32px;}
+  .cv-body h4{font-size:17px;font-weight:800;margin-bottom:8px;}
+  .cv-body p{font-size:14.5px;line-height:1.7;color:#444;margin-bottom:10px;max-width:640px;}
+  .cv-body blockquote{font-size:14px;line-height:1.6;color:var(--gray-2);font-style:italic;border-left:2px solid var(--line);padding-left:14px;max-width:640px;margin:0;}
+  @media (max-width:600px){.cv-item{flex-direction:column;gap:8px;}}
 
   /* ---------- Process ---------- */
   .process-strip{display:flex;align-items:center;gap:0;flex-wrap:wrap;}
   .proc-step{flex:1;min-width:140px;text-align:center;padding:0 12px;}
   .proc-num{
-    width:44px;height:44px;border-radius:50%;background:var(--white);color:var(--black);
+    width:44px;height:44px;border-radius:50%;background:var(--white);color:var(--ink);
     display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;
     margin:0 auto 16px;
   }
@@ -214,7 +227,7 @@
   @media (max-width:760px){.process-strip{flex-direction:column;gap:24px;}.proc-arrow{transform:rotate(90deg);}}
 
   /* ---------- Footer ---------- */
-  footer{background:var(--black);color:#8a8a86;padding:64px 24px 40px;text-align:center;}
+  footer{background:var(--navy-grad);color:#c9c9c7;padding:64px 24px 40px;text-align:center;}
   footer .flogo{font-size:22px;font-weight:800;color:var(--white);margin-bottom:20px;}
   footer .flinks{display:flex;justify-content:center;gap:24px;margin-bottom:28px;flex-wrap:wrap;}
   footer .flinks a{font-size:14px;font-weight:600;color:#c9c9c7;}
@@ -302,7 +315,7 @@
   <div class="wrap">
     <div class="leader-mark reveal">“</div>
     <p class="leader-text reveal">우리가 뽑는 한 사람 한 사람이<br>LSSC의 다음 브랜드를, 다음 매출 곡선을 만듭니다 —<br>그 시작점에 서 있는 일, 함께 만들어 보고 싶습니다!</p>
-    <p class="leader-role reveal">Recruiting Part 팀장 · Head of HR</p>
+    <p class="leader-role reveal">Head of HR</p>
   </div>
 </section>
 
@@ -374,20 +387,75 @@
   </div>
 </section>
 
-<!-- BENEFITS -->
-<section class="section">
+<!-- ABOUT LSSC -->
+<section class="section" id="about">
   <div class="wrap">
-    <span class="tag reveal">함께 일하면 좋은 것들</span>
-    <h2 class="reveal" style="font-size:clamp(24px,3.4vw,36px);font-weight:800;margin-bottom:48px;">공통 복리후생</h2>
-    <div class="benefit-grid reveal">
-      <div class="benefit-item"><span class="ic">🍚</span><span class="tt">점심 · 조식 지원</span></div>
-      <div class="benefit-item"><span class="ic">🕓</span><span class="tt">금요일 조기퇴근</span></div>
-      <div class="benefit-item"><span class="ic">🎂</span><span class="tt">생일 유급휴가</span></div>
-      <div class="benefit-item"><span class="ic">🏌️</span><span class="tt">헬스 · 골프 지원</span></div>
-      <div class="benefit-item"><span class="ic">🖥️</span><span class="tt">듀얼 모니터 제공</span></div>
-      <div class="benefit-item"><span class="ic">🌴</span><span class="tt">자유로운 연차</span></div>
-      <div class="benefit-item"><span class="ic">🌙</span><span class="tt">야근수당 지급</span></div>
-      <div class="benefit-item"><span class="ic">🛍️</span><span class="tt">자사 제품 할인</span></div>
+    <span class="tag reveal">About LSSC</span>
+    <h2 class="reveal" style="font-size:clamp(24px,3.4vw,36px);font-weight:800;margin-bottom:28px;">우리는 어떤 회사인가</h2>
+    <p class="reveal" style="font-size:16px;line-height:1.85;color:#333;max-width:760px;margin-bottom:20px;">Global House of Brands, LSSC는 작년 연매출 1,200억 원을 달성했으며, 뷰티・라이프스타일・디바이스(라셀턴, 쥬비컷, 락토디토, 소명한방, 비엘피, 링클백, 비렌느 등)등의 브랜드를 성공시킨 대표 브랜드 하우스입니다.</p>
+    <p class="reveal" style="font-size:16px;line-height:1.85;color:#333;max-width:760px;margin-bottom:64px;">LSSC는 단순히 유행을 따르기보다 일상의 평범함 속에서 독창적인 가치를 발굴해 브랜드로 완성하는 것을 업의 본질로 삼고 있습니다. 또한, 내가 즐거워야 소비자도 즐겁다는 믿음 아래, 정해진 틀을 벗어나 각자의 색깔을 담아 프로젝트에 몰입하는 문화를 지향합니다.</p>
+
+    <div class="mv-grid reveal">
+      <div class="mv-card">
+        <div class="mv-ic">🎯</div>
+        <div class="mv-label">Mission</div>
+        <p class="mv-headline">세상에 즐거움을 주는 기업</p>
+        <p class="mv-body">고객이 진짜 원하는 제품을 발굴・개발하고, 데이터 기반 미디어 커머스를 통해 시장을 선도하며, 삶에 필요한 가치를 전달합니다.</p>
+      </div>
+      <div class="mv-card">
+        <div class="mv-ic">🔭</div>
+        <div class="mv-label">Vision</div>
+        <p class="mv-headline">삶을 변화시킬 새로움을 통해, 전 세계 소비자의 일상을 점유한다</p>
+        <p class="mv-body">단일 브랜드, 단일 시장에 갇히지 않고 뷰티・헬스・라이프스타일 등 카테고리와 국경을 가로질러 다수의 브랜드를 동시에 성장시키는 'Scale Out' 전략으로, D2C 미디어커머스의 새로운 패러다임을 만들어갑니다. 지금의 성과는 도착점이 아닌 시작점이며, 다음 목표는 전 세계 소비자의 일상 속에 자리 잡는 것입니다.</p>
+      </div>
+    </div>
+
+    <div class="cv-head reveal">
+      <span class="tag" style="margin-bottom:8px;">Core Values</span>
+      <h3 style="font-size:clamp(20px,2.6vw,28px);font-weight:800;">우리가 함께하고 싶은 인재상</h3>
+    </div>
+
+    <div class="cv-list reveal">
+      <div class="cv-item">
+        <div class="cv-num">01</div>
+        <div class="cv-body">
+          <h4>목표에 몰입해 성과를 만들어내는 인재</h4>
+          <p>안 되는 이유보다 되는 방법을 찾고, 끝까지 실행해 목표를 반드시 결과로 연결합니다.</p>
+          <blockquote>“목표를 향해 몰입하고, 어떻게든 성과를 만들어내는 집요함에 진심인 분을 찾습니다.”</blockquote>
+        </div>
+      </div>
+      <div class="cv-item">
+        <div class="cv-num">02</div>
+        <div class="cv-body">
+          <h4>유연한 태도로 변화를 수용하는 인재</h4>
+          <p>빠르게 달라지는 시장과 조직 상황을 열린 태도로 받아들이고, 변화를 빠르게 수용하고 성장합니다.</p>
+          <blockquote>“어제의 정답이 오늘은 아닐 수 있어요. 변화를 두려워하지 않고 유연하게 대응하는 분과 함께하고 싶습니다.”</blockquote>
+        </div>
+      </div>
+      <div class="cv-item">
+        <div class="cv-num">03</div>
+        <div class="cv-body">
+          <h4>트렌드에 대한 감각과 이해로 남다른 성과를 만드는 인재</h4>
+          <p>스스로 학습한 트렌드에 대한 감각과 이해를 바탕으로, 고객의 마음을 움직이는 차별화된 결과를 만듭니다.</p>
+          <blockquote>“화려한 스펙보다, 트렌드를 읽는 감각과 자신만의 관점으로 남다른 성과를 만드는 분을 믿습니다.”</blockquote>
+        </div>
+      </div>
+      <div class="cv-item">
+        <div class="cv-num">04</div>
+        <div class="cv-body">
+          <h4>선하고 열린 태도로 팀에 긍정적인 영향을 주는 인재</h4>
+          <p>동료의 의견을 존중하고 열린 마음으로 소통하며, 조직 전체에 좋은 에너지와 신뢰를 더합니다.</p>
+          <blockquote>“실력만큼이나 함께 일하고 싶은 사람인지가 중요해요. 선하고 열린 태도로 팀 전체의 성과를 끌어올리는 분을 찾습니다.”</blockquote>
+        </div>
+      </div>
+      <div class="cv-item">
+        <div class="cv-num">05</div>
+        <div class="cv-body">
+          <h4>경쟁보다 협력으로 함께 성장하는 인재</h4>
+          <p>단순한 열등감이나 경쟁보다는 동료와 건강하게 협력하며, 팀의 성과와 자신의 성장을 함께 만들어갑니다.</p>
+          <blockquote>“혼자 앞서가기보다 동료와 함께 더 멀리 가는 태도, 그것이 LSSC가 함께하고 싶은 사람의 모습입니다.”</blockquote>
+        </div>
+      </div>
     </div>
   </div>
 </section>
