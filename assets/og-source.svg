@@ -1,0 +1,38 @@
+<svg width="1200" height="1200" viewBox="0 0 1200 1200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="navy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1a3f"/>
+      <stop offset="55%" stop-color="#1c3a82"/>
+      <stop offset="100%" stop-color="#0b1a3f"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="85%" cy="15%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="8%" cy="95%" r="45%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="1200" fill="url(#navy)"/>
+  <rect width="1200" height="1200" fill="url(#glow1)"/>
+  <rect width="1200" height="1200" fill="url(#glow2)"/>
+
+  <!-- content band: y=285 to y=915 (630px tall, centered in 1200x1200) -->
+  <text x="600" y="405" font-family="'Apple SD Gothic Neo','Arial',sans-serif" font-size="96" font-weight="800"
+        text-anchor="middle" fill="#ffffff" opacity="0.07" letter-spacing="2">WE SCALE OUT.</text>
+
+  <text x="80" y="375" font-family="'Arial',sans-serif" font-size="34" font-weight="800" fill="#ffffff" letter-spacing="-0.5">LSSC</text>
+  <text x="163" y="361" font-family="'Arial',sans-serif" font-size="14" font-weight="700" fill="#ffffff">&#174;</text>
+
+  <circle cx="82" cy="453" r="4" fill="#8a8a86"/>
+  <text x="96" y="458" font-family="'Apple SD Gothic Neo','Arial',sans-serif" font-size="16" font-weight="700"
+        letter-spacing="1.5" fill="#c9c9c7">LSSC RECRUITING PART · TEAM BUILDING</text>
+
+  <text x="80" y="565" font-family="'Apple SD Gothic Neo','Arial',sans-serif" font-size="72" font-weight="800" fill="#ffffff">LSSC</text>
+  <text x="80" y="655" font-family="'Apple SD Gothic Neo','Arial',sans-serif" font-size="72" font-weight="800" fill="#39ff14">Recruiting Part</text>
+  <text x="80" y="745" font-family="'Apple SD Gothic Neo','Arial',sans-serif" font-size="72" font-weight="800" fill="#ffffff">팀빌딩</text>
+
+  <text x="80" y="815" font-family="'Apple SD Gothic Neo','Arial',sans-serif" font-size="26" font-weight="600" fill="#c9c9c7">140명 → 250명, 연 매출 1,200억 → 2,000억 이상 목표</text>
+</svg>
