@@ -77,6 +77,23 @@
     pointer-events:none;
   }
   .hero-inner{max-width:var(--maxw);margin:0 auto;width:100%;position:relative;z-index:1;}
+
+  .hero-marquee{position:absolute;top:80px;left:0;width:100%;overflow:hidden;pointer-events:none;}
+  .hero-marquee-track{display:flex;width:max-content;animation:marqueeScroll 26s linear infinite;}
+  .hero-marquee-track span{
+    display:inline-block;white-space:nowrap;
+    font-size:clamp(40px,10vw,120px);font-weight:800;letter-spacing:-0.01em;
+    text-transform:uppercase;color:rgba(255,255,255,0.1);
+  }
+  @keyframes marqueeScroll{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+  .hero-brands{position:absolute;inset:0;pointer-events:none;}
+  .hb{position:absolute;animation:hbFadeIn .9s ease forwards, hbFloat 7s ease-in-out infinite;}
+  .hb img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;box-shadow:0 16px 32px rgba(0,0,0,0.35);opacity:0;animation:hbImgFade .9s ease forwards;animation-delay:inherit;}
+  @keyframes hbFadeIn{from{opacity:0;}to{opacity:1;}}
+  @keyframes hbImgFade{from{opacity:0;}to{opacity:.96;}}
+  @keyframes hbFloat{0%,100%{transform:translateY(0) rotate(var(--r,0deg));}50%{transform:translateY(-10px) rotate(var(--r,0deg));}}
+  @media (max-width:900px){.hero-brands,.hero-marquee{display:none;}}
   .eyebrow{
     display:inline-flex;align-items:center;gap:8px;
     font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--gray-2);
@@ -246,6 +263,21 @@
 
 <!-- HERO -->
 <section class="hero">
+  <div class="hero-marquee" aria-hidden="true">
+    <div class="hero-marquee-track">
+      <span>WE SCALE OUT.&nbsp;&nbsp;&nbsp;&nbsp;WE SCALE OUT.&nbsp;&nbsp;&nbsp;&nbsp;WE SCALE OUT.&nbsp;&nbsp;&nbsp;&nbsp;</span>
+      <span>WE SCALE OUT.&nbsp;&nbsp;&nbsp;&nbsp;WE SCALE OUT.&nbsp;&nbsp;&nbsp;&nbsp;WE SCALE OUT.&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    </div>
+  </div>
+  <div class="hero-brands" aria-hidden="true">
+    <div class="hb" style="top:9%;right:9%;width:96px;--r:-6deg;transform:rotate(-6deg);animation-delay:.1s;"><img src="assets/brands/wrinkleback.png" alt=""></div>
+    <div class="hb" style="top:5%;right:29%;width:62px;--r:8deg;transform:rotate(8deg);animation-delay:.5s;"><img src="assets/brands/blp.png" alt=""></div>
+    <div class="hb" style="top:24%;right:3%;width:78px;--r:-4deg;transform:rotate(-4deg);animation-delay:.9s;"><img src="assets/brands/vwell.png" alt=""></div>
+    <div class="hb" style="top:35%;right:23%;width:68px;--r:6deg;transform:rotate(6deg);animation-delay:1.3s;"><img src="assets/brands/virenne.png" alt=""></div>
+    <div class="hb" style="top:49%;right:6%;width:88px;--r:-7deg;transform:rotate(-7deg);animation-delay:1.7s;"><img src="assets/brands/sleemoon.png" alt=""></div>
+    <div class="hb" style="top:60%;right:27%;width:64px;--r:5deg;transform:rotate(5deg);animation-delay:2.1s;"><img src="assets/brands/lactodito.png" alt=""></div>
+    <div class="hb" style="top:71%;right:10%;width:92px;--r:-5deg;transform:rotate(-5deg);animation-delay:2.5s;"><img src="assets/brands/racelturn.png" alt=""></div>
+  </div>
   <div class="hero-inner">
     <span class="eyebrow">LSSC Recruiting Part · Team Building</span>
     <h1>사람과 숫자가<br>함께 성장하는 순간,<br>그 <span class="hl">시작점</span>에 서다.</h1>
