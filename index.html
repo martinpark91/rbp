@@ -89,7 +89,7 @@
 
   .hero-brands{position:absolute;inset:0;pointer-events:none;}
   .hb{position:absolute;animation:hbFadeIn .9s ease forwards, hbFloat 7s ease-in-out infinite;}
-  .hb img{display:block;width:100%;aspect-ratio:1/1;object-fit:contain;background:#fff;padding:10px;box-sizing:border-box;border-radius:14px;box-shadow:0 16px 32px rgba(0,0,0,0.35);opacity:0;animation:hbImgFade .9s ease forwards;animation-delay:inherit;}
+  .hb img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:14px;box-shadow:0 16px 32px rgba(0,0,0,0.35);opacity:0;animation:hbImgFade .9s ease forwards;animation-delay:inherit;}
   @keyframes hbFadeIn{from{opacity:0;}to{opacity:1;}}
   @keyframes hbImgFade{from{opacity:0;}to{opacity:.96;}}
   @keyframes hbFloat{0%,100%{transform:translateY(0) rotate(var(--r,0deg));}50%{transform:translateY(-10px) rotate(var(--r,0deg));}}
