@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>LSSC Recruiting Part — 함께 성장할 사람을 찾습니다</title>
-<meta name="description" content="140명에서 250명, 1,200억에서 2,000억으로. LSSC의 다음 성장 곡선을 설계하는 Recruiting Part 채용 안내.">
+<meta name="description" content="140명에서 250명, 1,200억에서 2,000억 이상으로. LSSC의 다음 성장 곡선을 설계하는 Recruiting Part 채용 안내.">
 <meta property="og:title" content="LSSC Recruiting Part 채용">
 <meta property="og:description" content="사람과 숫자가 함께 성장하는 순간을 가장 가까이에서 설계하는 팀, Recruiting Part.">
 <meta property="og:type" content="website">
@@ -14,8 +14,6 @@
   :root{
     --black:#0a0a0a;
     --white:#ffffff;
-    --accent:#ff5a1f;
-    --accent-dim:#ffe7da;
     --gray-1:#f5f5f4;
     --gray-2:#8a8a86;
     --gray-3:#1c1c1c;
@@ -59,7 +57,7 @@
     transition:all .2s ease;
   }
   .topbar.scrolled .back-link{border-color:var(--line);}
-  .back-link:hover{background:var(--accent);border-color:var(--accent);color:var(--white);}
+  .back-link:hover{background:var(--gray-1);border-color:var(--gray-1);color:var(--black);}
 
   /* ---------- Hero ---------- */
   .hero{
@@ -73,25 +71,25 @@
   }
   .hero::before{
     content:'';position:absolute;inset:0;
-    background:radial-gradient(circle at 85% 15%, rgba(255,90,31,0.25), transparent 45%),
-               radial-gradient(circle at 10% 90%, rgba(255,90,31,0.12), transparent 40%);
+    background:radial-gradient(circle at 85% 15%, rgba(255,255,255,0.08), transparent 45%),
+               radial-gradient(circle at 10% 90%, rgba(255,255,255,0.04), transparent 40%);
     pointer-events:none;
   }
   .hero-inner{max-width:var(--maxw);margin:0 auto;width:100%;position:relative;z-index:1;}
   .eyebrow{
     display:inline-flex;align-items:center;gap:8px;
-    font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--accent);
+    font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--gray-2);
     text-transform:uppercase;margin-bottom:28px;
     opacity:0;animation:fadeUp .8s ease forwards;animation-delay:.1s;
   }
-  .eyebrow::before{content:'';width:6px;height:6px;background:var(--accent);border-radius:50%;}
+  .eyebrow::before{content:'';width:6px;height:6px;background:var(--gray-2);border-radius:50%;}
   .hero h1{
     font-size:clamp(34px,6.2vw,74px);
     font-weight:800;line-height:1.18;letter-spacing:-0.02em;
     margin-bottom:28px;
     opacity:0;animation:fadeUp .9s ease forwards;animation-delay:.25s;
   }
-  .hero h1 .hl{color:var(--accent);}
+  .hero h1 .hl{text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:10px;}
   .hero p.lead{
     font-size:clamp(16px,2vw,20px);color:#c9c9c7;line-height:1.65;max-width:640px;margin-bottom:48px;
     opacity:0;animation:fadeUp .9s ease forwards;animation-delay:.4s;
@@ -105,8 +103,8 @@
     padding:16px 28px;border-radius:100px;font-weight:700;font-size:15px;
     transition:all .2s ease;cursor:pointer;border:none;
   }
-  .btn-primary{background:var(--accent);color:var(--white);}
-  .btn-primary:hover{background:#e64d15;transform:translateY(-2px);}
+  .btn-primary{background:var(--white);color:var(--black);}
+  .btn-primary:hover{background:#d8d8d5;transform:translateY(-2px);}
   .btn-ghost{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,0.35);}
   .btn-ghost:hover{border-color:var(--white);}
   .scroll-cue{
@@ -114,7 +112,7 @@
     font-size:12px;color:#8a8a86;display:flex;align-items:center;gap:8px;
     opacity:0;animation:fadeUp .9s ease forwards;animation-delay:.9s;
   }
-  .scroll-cue .line{width:1px;height:28px;background:linear-gradient(var(--accent),transparent);animation:scrollLine 1.8s ease infinite;}
+  .scroll-cue .line{width:1px;height:28px;background:linear-gradient(rgba(255,255,255,0.7),transparent);animation:scrollLine 1.8s ease infinite;}
   @keyframes scrollLine{0%{transform:scaleY(0);transform-origin:top;}50%{transform:scaleY(1);transform-origin:top;}100%{transform:scaleY(0);transform-origin:bottom;}}
   @keyframes fadeUp{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
 
@@ -122,7 +120,7 @@
   .section{padding:120px 24px;}
   .section-dark{background:var(--black);color:var(--white);}
   .tag{
-    font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);
+    font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-2);
     margin-bottom:18px;display:block;
   }
   .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.8,.2,1), transform .8s cubic-bezier(.2,.8,.2,1);}
@@ -133,19 +131,20 @@
     font-size:clamp(22px,3.4vw,38px);font-weight:700;line-height:1.5;letter-spacing:-0.01em;
     max-width:820px;margin-bottom:72px;
   }
-  .team-quote .hl{color:var(--accent);}
+  .team-quote .hl{text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:8px;}
   .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);}
   .stat-card{background:var(--white);padding:44px 36px;}
   .stat-label{font-size:14px;color:var(--gray-2);font-weight:600;margin-bottom:16px;}
   .stat-num{font-size:clamp(30px,5vw,52px);font-weight:800;letter-spacing:-0.02em;display:flex;align-items:baseline;gap:12px;}
-  .stat-num .arrow{color:var(--accent);font-size:0.5em;}
-  .stat-num .to{color:var(--accent);}
+  .stat-num .arrow{color:var(--gray-2);font-size:0.5em;}
+  .stat-num .from{color:var(--gray-2);}
+  .stat-num .to{color:var(--black);}
   @media (max-width:640px){.stat-grid{grid-template-columns:1fr;}}
 
   /* ---------- Recruiting Part intro ---------- */
   .rp-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:start;}
   .rp-copy h2{font-size:clamp(26px,3.6vw,42px);font-weight:800;line-height:1.4;letter-spacing:-0.02em;color:var(--white);margin-bottom:24px;}
-  .rp-copy h2 .hl{color:var(--accent);}
+  .rp-copy h2 .hl{text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:8px;}
   .rp-copy p{font-size:17px;line-height:1.8;color:#c9c9c7;max-width:520px;}
   .journey{display:flex;flex-direction:column;gap:0;}
   .journey-step{
@@ -159,7 +158,7 @@
 
   /* ---------- Leader quote ---------- */
   .leader{background:var(--gray-1);text-align:center;}
-  .leader-mark{font-size:80px;color:var(--accent);font-weight:800;line-height:1;margin-bottom:8px;font-family:Georgia,serif;}
+  .leader-mark{font-size:80px;color:var(--black);opacity:0.18;font-weight:800;line-height:1;margin-bottom:8px;font-family:Georgia,serif;}
   .leader-text{
     font-size:clamp(20px,3.2vw,34px);font-weight:700;line-height:1.5;letter-spacing:-0.01em;
     max-width:820px;margin:0 auto 28px;
@@ -180,7 +179,7 @@
   .job-card:hover{box-shadow:0 24px 48px rgba(0,0,0,0.08);transform:translateY(-4px);border-color:transparent;}
   .job-meta{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap;}
   .chip{font-size:12px;font-weight:700;padding:6px 12px;border-radius:100px;background:var(--gray-1);color:var(--black);}
-  .chip-accent{background:var(--accent-dim);color:#c23e0d;}
+  .chip-accent{background:var(--black);color:var(--white);}
   .job-card h3{font-size:24px;font-weight:800;letter-spacing:-0.01em;margin-bottom:10px;}
   .job-card .job-sub{font-size:14px;color:var(--gray-2);font-weight:600;margin-bottom:28px;}
   .job-list{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:32px;flex:1;}
@@ -193,7 +192,7 @@
     padding:16px 22px;border-radius:14px;background:var(--black);color:var(--white);
     font-weight:700;font-size:15px;transition:background .2s ease;
   }
-  .job-apply:hover{background:var(--accent);}
+  .job-apply:hover{background:var(--white);color:var(--black);}
 
   /* ---------- Benefits ---------- */
   .benefit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
@@ -211,7 +210,7 @@
     margin:0 auto 16px;
   }
   .proc-step p{font-size:14.5px;color:#c9c9c7;font-weight:600;}
-  .proc-arrow{color:var(--accent);font-size:20px;padding:0 4px;}
+  .proc-arrow{color:var(--gray-2);font-size:20px;padding:0 4px;}
   @media (max-width:760px){.process-strip{flex-direction:column;gap:24px;}.proc-arrow{transform:rotate(90deg);}}
 
   /* ---------- Footer ---------- */
@@ -237,7 +236,7 @@
   <div class="hero-inner">
     <span class="eyebrow">LSSC Recruiting Part · Team Building</span>
     <h1>사람과 숫자가<br>함께 성장하는 순간,<br>그 <span class="hl">시작점</span>에 서다.</h1>
-    <p class="lead">140명에서 250명으로, 연 매출 1,200억에서 2,000억으로 — LSSC의 다음 성장 곡선을 가장 가까이에서 설계하는 팀, Recruiting Part가 함께할 사람을 찾습니다.</p>
+    <p class="lead">140명에서 250명으로, 연 매출 1,200억에서 2,000억 이상으로 — LSSC의 다음 성장 곡선을 가장 가까이에서 설계하는 팀, Recruiting Part가 함께할 사람을 찾습니다.</p>
     <div class="hero-cta">
       <a class="btn btn-primary" href="#positions">오픈 포지션 보기 →</a>
       <a class="btn btn-ghost" href="#team">팀 소개 보기</a>
@@ -250,7 +249,7 @@
 <section class="section" id="team">
   <div class="wrap">
     <span class="tag reveal">우리 팀 소개</span>
-    <p class="team-quote reveal">140명에서 250명으로, 연 매출 1,200억에서 2,000억으로 —<br>
+    <p class="team-quote reveal">140명에서 250명으로, 연 매출 1,200억에서 2,000억 이상으로 —<br>
       사람과 숫자가 함께 성장하는 순간을<br>
       가장 가까이에서 <span class="hl">설계하는 팀</span>입니다.</p>
 
@@ -261,7 +260,7 @@
       </div>
       <div class="stat-card">
         <div class="stat-label">연 매출</div>
-        <div class="stat-num"><span class="from" data-count="1200">0</span><span class="arrow">→</span><span class="to" data-count="2000">0</span><span style="font-size:0.4em;font-weight:700;color:var(--gray-2);">억</span></div>
+        <div class="stat-num"><span class="from" data-count="1200">0</span><span class="arrow">→</span><span class="to" data-count="2000">0</span><span style="font-size:0.4em;font-weight:700;color:var(--gray-2);">억 이상</span></div>
       </div>
     </div>
   </div>
@@ -302,8 +301,8 @@
 <section class="section leader">
   <div class="wrap">
     <div class="leader-mark reveal">“</div>
-    <p class="leader-text reveal">우리가 뽑는 한 사람 한 사람이<br>LSSC의 다음 브랜드를, 다음 매출 곡선을 만듭니다 —<br>그 시작점에 서 있는 일, 함께 하실래요?</p>
-    <p class="leader-role reveal">Recruiting Part 팀장</p>
+    <p class="leader-text reveal">우리가 뽑는 한 사람 한 사람이<br>LSSC의 다음 브랜드를, 다음 매출 곡선을 만듭니다 —<br>그 시작점에 서 있는 일, 함께 만들어 보고 싶습니다!</p>
+    <p class="leader-role reveal">Recruiting Part 팀장 · Head of HR</p>
   </div>
 </section>
 
